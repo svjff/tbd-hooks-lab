@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { add, divide, subtract } from './calc.js';
+import { add, divide, multiply, subtract } from './calc.js';
 
 test('add: складывает два числа', () => {
   assert.equal(add(2, 3), 5);
@@ -15,4 +15,7 @@ test('divide: бросает ошибку при делении на ноль', 
 });
 test('subtract: вычитает два числа', () => {
   assert.equal(subtract(5, 2), 3);
+});
+test('multiply: умножает два числа', () => {
+  assert.equal(multiply(2, 3), 6);
 });
