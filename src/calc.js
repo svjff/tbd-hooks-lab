@@ -14,3 +14,9 @@ export function subtract(a, b) {
 export function multiply(a, b) {
   return a * b;
 }
+export function power(a, b) {
+  if (process.env.ENABLE_POWER === 'true') {
+    return Math.pow(a, b);
+  }
+  throw new Error('Feature disabled');
+}
